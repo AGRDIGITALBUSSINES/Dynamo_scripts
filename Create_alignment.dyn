@@ -1,0 +1,618 @@
+{
+  "Uuid": "f055176a-1b4e-4a77-90b3-6a00c7a390f3",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Create_alignment",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Inputs.SetInputValue": {
+        "Key": "ObjectGMathcadPrime5.Inputs",
+        "Value": "ObjectGMathcadPrime5.dll"
+      },
+      "Inputs": {
+        "Key": "ObjectGMathcadPrime5.Inputs",
+        "Value": "ObjectGMathcadPrime5.dll"
+      },
+      "Color.ByARGB": {
+        "Key": "DSCore.Color",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Color.Green": {
+        "Key": "DSCore.Color",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Color": {
+        "Key": "DSCore.Color",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Layer": {
+        "Key": "Autodesk.AutoCAD.DynamoNodes.Layer",
+        "Value": "AutoCADNodes.dll"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "b6f41640b4854c418f55e914fbb2f0c9",
+      "Name": "Name ",
+      "Type": "string",
+      "Value": "",
+      "Description": "Creates a string."
+    },
+    {
+      "Id": "1d96df8951864ba09e22e081c4b0718f",
+      "Name": "Seq ID",
+      "Type": "number",
+      "Value": "0",
+      "NumberType": "Double",
+      "Description": "Creates a number."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.Civil.DynamoNodes.AlignmentExtensions.CreateAlignmentByPolyline@string,Autodesk.AutoCAD.DynamoNodes.Polyline,string,string,string,string,bool",
+      "Id": "1894bb2ef9194299b22804f037182904",
+      "Inputs": [
+        {
+          "Id": "b04f6ad8000d41d18c1772d4467fa2f5",
+          "Name": "name",
+          "Description": "The Alignment name. If the name is already used it returns the existing Alignment.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b1d08eb534624e4bb474a2ffe04e4c8e",
+          "Name": "polyline",
+          "Description": "The Polyline used for the alignment\n\nPolyline",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d4607a13905140caa78a832363941cbd",
+          "Name": "site",
+          "Description": "The Site name\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f63dffdd66d40f08f700c9a03f140a5",
+          "Name": "layer",
+          "Description": "The layer name\n\nstring\nDefault value : \"0\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8622aa1631384efcabe1cb2648ca5e65",
+          "Name": "style",
+          "Description": "The Alignment style name\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b6b4cf70724d4524a00545bdcac0db5b",
+          "Name": "labelSet",
+          "Description": "The label set\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a3a0022102434db69fed11611dc7ff21",
+          "Name": "addCurves",
+          "Description": "If true adds the curves between the tangents in the Alignment\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c75c29dc39524ca582f93e3f0e5cbae1",
+          "Name": "Alignment",
+          "Description": "Alignment",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates an Alignment by Polyline\n\nAlignmentExtensions.CreateAlignmentByPolyline (name: string, polyline: Polyline, site: string = \"\", layer: string = \"0\", style: string = \"\", labelSet: string = \"\", addCurves: bool = true): Alignment"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "ACM_DISEÑO",
+      "Id": "2c44b0acfe1d48dfb0467233faa9c0df",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f620cfabe4fa44519e8e45c804d86fa9",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": false,
+      "Id": "eb465ade3bcc443299d7fae8cb97c296",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ddfa93e5a9104e578a9922d8b052606e",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "_No Labels",
+      "Id": "069c0c1be8e242458c13b684d79a4a57",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ff3dd4a33a5e4570869e2cd7e836200c",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Autodesk.AutoCAD.DynamoNodes.ObjectsSelection, Autodesk.Civil3DToolkitUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "8945"
+      ],
+      "Id": "115e520da7604fdfaf3bfad2eace39bf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e2b1ec00d89e4528924b7f325fc2d37b",
+          "Name": "Objects",
+          "Description": "Objects",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "",
+      "Id": "b6f41640b4854c418f55e914fbb2f0c9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e3a3bc89142b49dd88a0dc272a263b4e",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "+@var[]..[],var[]..[]",
+      "Id": "1fbf64b50786460a95791f6a70ade23e",
+      "Inputs": [
+        {
+          "Id": "c0afc24e69b340ff833ecd2c25953aba",
+          "Name": "x",
+          "Description": "x value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4670567cece94968bec0f437dd2161e4",
+          "Name": "y",
+          "Description": "y value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2e5a680875a94fdf995a0ec77b5a64e9",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Sequence, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "f0a2e8fbc3a348c4b9ffc1fbf995b061",
+      "Inputs": [
+        {
+          "Id": "6185e287e8a7487d8101adc435d38af8",
+          "Name": "start",
+          "Description": "Number or letter to start the sequence at\r\nDefault value: 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "393ddb3f209648b0a317df70c5b69ffb",
+          "Name": "amount",
+          "Description": "Amount of numbers in the sequence\r\nDefault value: 10",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2b6d69dead874414b13fe18a3497a2ff",
+          "Name": "step",
+          "Description": "Space between numbers or letters\r\nDefault value: 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b9664e6afb7f4c55837bfb7e832528ec",
+          "Name": "seq",
+          "Description": "New sequence",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a sequence of numbers."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "100;\n1;",
+      "Id": "14dcd97d4176479bb626d265638fecad",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ecfd7923eabc4e1f919a7ab8408c0e1f",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0b8498902b0f4192a96a84b45a5d28c2",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"HP-ALIGN-DESING\";",
+      "Id": "b8d56298603d44e593643686439a7ad4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cb47983005734b338d4639afd4f5f7f2",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 0.0,
+      "Id": "1d96df8951864ba09e22e081c4b0718f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1e9ce8932ecd4b78ae38c19399893c7f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f620cfabe4fa44519e8e45c804d86fa9",
+      "End": "8622aa1631384efcabe1cb2648ca5e65",
+      "Id": "9a766452f11249ae9beeaab35ea75edf"
+    },
+    {
+      "Start": "ddfa93e5a9104e578a9922d8b052606e",
+      "End": "a3a0022102434db69fed11611dc7ff21",
+      "Id": "f1526da761824bc4ba53df2605b357b0"
+    },
+    {
+      "Start": "ff3dd4a33a5e4570869e2cd7e836200c",
+      "End": "b6b4cf70724d4524a00545bdcac0db5b",
+      "Id": "1be547c785ae4f5295f3500a033037f9"
+    },
+    {
+      "Start": "e2b1ec00d89e4528924b7f325fc2d37b",
+      "End": "b1d08eb534624e4bb474a2ffe04e4c8e",
+      "Id": "aabc0201b9a648408459f06eb42accf8"
+    },
+    {
+      "Start": "e3a3bc89142b49dd88a0dc272a263b4e",
+      "End": "c0afc24e69b340ff833ecd2c25953aba",
+      "Id": "f47cb48f85f046c99a938e6f7939525d"
+    },
+    {
+      "Start": "2e5a680875a94fdf995a0ec77b5a64e9",
+      "End": "b04f6ad8000d41d18c1772d4467fa2f5",
+      "Id": "8d97833e0a54452199aec3b5fc5ddaf3"
+    },
+    {
+      "Start": "b9664e6afb7f4c55837bfb7e832528ec",
+      "End": "4670567cece94968bec0f437dd2161e4",
+      "Id": "4ecbe6b764504d7eb13405c4341ebf58"
+    },
+    {
+      "Start": "ecfd7923eabc4e1f919a7ab8408c0e1f",
+      "End": "393ddb3f209648b0a317df70c5b69ffb",
+      "Id": "eb612838068e4719b915a849e5a0ecc4"
+    },
+    {
+      "Start": "0b8498902b0f4192a96a84b45a5d28c2",
+      "End": "2b6d69dead874414b13fe18a3497a2ff",
+      "Id": "bdc2f9a08e5a4ff7b7dd4eb7910010e6"
+    },
+    {
+      "Start": "cb47983005734b338d4639afd4f5f7f2",
+      "End": "8f63dffdd66d40f08f700c9a03f140a5",
+      "Id": "08fdfeb8c2e74e49b169372949d9ba25"
+    },
+    {
+      "Start": "1e9ce8932ecd4b78ae38c19399893c7f",
+      "End": "6185e287e8a7487d8101adc435d38af8",
+      "Id": "75fb9589740b444c9952497ce60a7f93"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Civil3DToolkit",
+      "Version": "1.1.30",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "1894bb2ef9194299b22804f037182904",
+        "115e520da7604fdfaf3bfad2eace39bf"
+      ]
+    }
+  ],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.5.2.7915",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "Id": "1894bb2ef9194299b22804f037182904",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "AlignmentExtensions.CreateAlignmentByPolyline",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 540.5,
+        "Y": 139.5
+      },
+      {
+        "Id": "2c44b0acfe1d48dfb0467233faa9c0df",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Style",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 282.83815913453554,
+        "Y": 331.52924252118976
+      },
+      {
+        "Id": "eb465ade3bcc443299d7fae8cb97c296",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 266.27938637817851,
+        "Y": 452.24985614301124
+      },
+      {
+        "Id": "069c0c1be8e242458c13b684d79a4a57",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Label",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 283.27938637817851,
+        "Y": 390.24985614301124
+      },
+      {
+        "Id": "115e520da7604fdfaf3bfad2eace39bf",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Select Polylines",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 247.94292785872841,
+        "Y": 118.49954008905667
+      },
+      {
+        "Id": "b6f41640b4854c418f55e914fbb2f0c9",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Name ",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 42.010617742762463,
+        "Y": -15.172854582617461
+      },
+      {
+        "Id": "1fbf64b50786460a95791f6a70ade23e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "+",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 234.61990273156698,
+        "Y": -3.8415582443977314
+      },
+      {
+        "Id": "f0a2e8fbc3a348c4b9ffc1fbf995b061",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Sequence",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 7.1096440059370707,
+        "Y": 47.244971419162368
+      },
+      {
+        "Id": "14dcd97d4176479bb626d265638fecad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Data1",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -132.52981794914456,
+        "Y": 111.72061362182154
+      },
+      {
+        "Id": "b8d56298603d44e593643686439a7ad4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 227.0874398495921,
+        "Y": 236.72176447773114
+      },
+      {
+        "Id": "1d96df8951864ba09e22e081c4b0718f",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Seq ID",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": -118.44999410141003,
+        "Y": 38.808206699820317
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "c962f34becd24d76bfc87152271e75df",
+        "Title": "~ SCRIPT CREADO POR  ANDRÉS G.  RODRÍGUEZ ~",
+        "Nodes": [],
+        "Left": 316.56927886944345,
+        "Top": -109.05104021026705,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 310.01511794536339,
+    "Y": 178.76223075482758,
+    "Zoom": 1.364152331495337
+  }
+}
